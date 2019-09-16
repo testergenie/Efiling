@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [E-filing]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="GSTR-1(failed)">
+    <classes>
+      <class name="GSTR1.File_GSTR1">
+        <methods>
+          <include name="tearDown"/>
+          <include name="fileselection"/>
+          <include name="uploadfiletype"/>
+          <include name="upload"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.File_GSTR1 -->
+      <class name="GSTR1.View_GSTR1_Invoice">
+        <methods>
+          <include name="B2B_View"/>
+          <include name="tearDown"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.View_GSTR1_Invoice -->
+    </classes>
+  </test> <!-- GSTR-1(failed) -->
+</suite> <!-- Failed suite [E-filing] -->

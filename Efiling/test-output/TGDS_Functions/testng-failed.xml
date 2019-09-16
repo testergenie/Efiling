@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TGDS_Functions]">
+  <test thread-count="5" name="TGDS_USER_Login(failed)">
+    <classes>
+      <class name="TGDS_USER_Functionalities.TGDS_User_Login">
+        <methods>
+          <include name="CreateSPUSER"/>
+          <include name="tearDown"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- TGDS_USER_Functionalities.TGDS_User_Login -->
+    </classes>
+  </test> <!-- TGDS_USER_Login(failed) -->
+</suite> <!-- Failed suite [TGDS_Functions] -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GSTR-1"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.685">
+  <properties />
+  
+  
+            <testcase name="efiling" time="0.685" classname="GSTR1.E_filing" />
+      
+</testsuite>

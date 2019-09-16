@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Admin">
+ 
+ <listeners>
+ 
+   <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+ <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  
+  
+  <test thread-count="5" name="TGDS Creation">
+    <classes>
+      <class name="Admin_Module.Login_Functionality"/>
+      <class name="Admin_Module.TGDS_Create"/>
+    </classes>
+    
+  </test> <!-- TGDS Creation -->
+  
+  
+</suite> <!-- Admin -->
+
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GSTR-1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="38.794">
+  <properties />
+  
+  
+            <testcase name="Gstr_1Details" time="33.649" classname="GSTR1.View_GSTR1_Invoice" />
+                <testcase name="B2B_View" time="5.145" classname="GSTR1.View_GSTR1_Invoice" />
+      
+</testsuite>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[object reporsitory is loaded]]>
+    </line>
+    <line>
+      <![CDATA[config file is loaded]]>
+    </line>
+    <line>
+      <![CDATA[Chrome opened]]>
+    </line>
+    <line>
+      <![CDATA[all file are loaded]]>
+    </line>
+    <line>
+      <![CDATA[browser is launched]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1038049" started-at="2019-04-22T12:11:11Z" finished-at="2019-04-22T12:28:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1038049" started-at="2019-04-22T12:11:11Z" finished-at="2019-04-22T12:28:29Z">
+      <class name="GOVGSTINSTATUS.GSTINSTATUS$Pansearch">
+        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="LaunchBrowser" is-config="true" duration-ms="5895" started-at="2019-04-22T12:11:05Z" finished-at="2019-04-22T12:11:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[object reporsitory is loaded]]>
+            </line>
+            <line>
+              <![CDATA[config file is loaded]]>
+            </line>
+            <line>
+              <![CDATA[Chrome opened]]>
+            </line>
+            <line>
+              <![CDATA[all file are loaded]]>
+            </line>
+            <line>
+              <![CDATA[browser is launched]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LaunchBrowser -->
+        <test-method status="PASS" signature="PANSEARCH()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="PANSEARCH" duration-ms="1038042" started-at="2019-04-22T12:11:11Z" description="Enter Pan and Captcha" finished-at="2019-04-22T12:28:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PANSEARCH -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="tearDown" is-config="true" duration-ms="3565" started-at="2019-04-22T12:28:29Z" finished-at="2019-04-22T12:28:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- GOVGSTINSTATUS.GSTINSTATUS$Pansearch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+    <suite name="Main Suite"  > 
+    <!-- suite name="Suite Name" --> 
+            <suite-files>
+                   <suite-file path="/Efiling/src/test/java/Admin_Module/Admin.xml" />
+                   <suite-file path="/Efiling/src/test/java/TGDS_USER_Functionalities/TGDS.xml" />
+                <!-- <suite-file path="./suiteC.xml" /> -->
+            </suite-files>
+    </suite>

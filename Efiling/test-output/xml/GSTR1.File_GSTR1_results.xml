@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GSTR-1"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="42.485">
+  <properties />
+  
+  
+            <testcase name="upload" time="8.506" classname="GSTR1.File_GSTR1" />
+                <testcase name="fileselection" time="23.827" classname="GSTR1.File_GSTR1" />
+                <testcase name="uploadfiletype" time="10.152" classname="GSTR1.File_GSTR1" />
+      
+</testsuite>

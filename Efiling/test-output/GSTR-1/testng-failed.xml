@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [GSTR-1]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="GSTR1.Dashboard">
+        <methods>
+          <include name="DashboardPage"/>
+          <include name="tearDown"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.Dashboard -->
+      <class name="GSTR1.Login">
+        <methods>
+          <include name="tearDown"/>
+          <include name="LoginPage"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.Login -->
+      <class name="GSTR1.E_filing">
+        <methods>
+          <include name="tearDown"/>
+          <include name="efiling"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.E_filing -->
+      <class name="GSTR1.File_GSTR1">
+        <methods>
+          <include name="Gstr_1Details"/>
+          <include name="tearDown"/>
+          <include name="fileselection"/>
+          <include name="uploadfiletype"/>
+          <include name="upload"/>
+          <include name="LaunchBrowser"/>
+        </methods>
+      </class> <!-- GSTR1.File_GSTR1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [GSTR-1] -->
