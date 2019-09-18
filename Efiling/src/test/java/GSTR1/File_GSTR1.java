@@ -9,6 +9,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import Base.ObjectRepository;
 
 
 public class File_GSTR1 extends Base {
@@ -20,15 +21,15 @@ public class File_GSTR1 extends Base {
 		try {
 		
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(prop.getProperty("Upload")))));
+			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ObjectRepository.Upload))));
 			driver.findElement(By.linkText("Upload")).click();
 			
 			Thread.sleep(3000);
-			driver.findElement(By.xpath(prop.getProperty("salesupload"))).click();
+			driver.findElement(By.xpath(ObjectRepository.salesupload)).click();
 			Thread.sleep(2000);
-			driver.findElement(By.xpath(prop.getProperty("purchaseupload"))).click();
+			driver.findElement(By.xpath(ObjectRepository.purchaseupload)).click();
 			Thread.sleep(3000);
-			driver.findElement(By.xpath(prop.getProperty("salesupload"))).click();
+			driver.findElement(By.xpath(ObjectRepository.salesupload)).click();
 		}
 		catch(Exception e) {
 			System.out.println("Unable to click on upload");
@@ -40,9 +41,9 @@ public class File_GSTR1 extends Base {
 	public void uploadfiletype() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(prop.getProperty("GSTR1")))));
+			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ObjectRepository.GSTR1))));
 			Thread.sleep(6000);
-			driver.findElement(By.xpath(prop.getProperty("Choosetemplatetype"))).click();
+			driver.findElement(By.xpath(ObjectRepository.Choosetemplatetype)).click();
 			Thread.sleep(1000);
 			driver.findElement(By.linkText("Government Standard Template")).click();
 			Thread.sleep(3000);
@@ -59,11 +60,11 @@ public class File_GSTR1 extends Base {
 	public void fileselection() {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(prop.getProperty("choose")))));
-			driver.findElement(By.xpath(prop.getProperty("choose"))).click();
+			wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(ObjectRepository.choose))));
+			driver.findElement(By.xpath(ObjectRepository.choose)).click();
 			Runtime.getRuntime().exec("C:\\Users\\Admin\\Documents\\UploadFile.exe");
 			Thread.sleep(3000);
-			driver.findElement(By.xpath(prop.getProperty("cancelbutton"))).click();
+			driver.findElement(By.xpath(ObjectRepository.cancelbutton)).click();
 			Thread.sleep(10000);
 			path = Base.captureScreenShot("Selectedfile");
  			Reporter.log("<a href="+path+">Selectedfile</a>");

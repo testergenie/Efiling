@@ -3,6 +3,7 @@ package GOVGSTINSTATUS;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.JOptionPane;
 
@@ -13,21 +14,29 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import Base.Base;
-
-public class GSTINSTATUS extends Base {
+public class GSTINSTATUS  {
 	
 	
 	
 		
 		@Test
 		public void PANSEARCH() throws Exception {
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\Efiling\\src\\test\\resources\\drivers\\chromedriver.exe");
+		          	WebDriver driver = new ChromeDriver();
+		          	
 					WebDriverWait wait = new WebDriverWait(driver,30);
+					
+					driver.get("https://services.gst.gov.in/services/login");
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					Thread.sleep(2000);
+					
 					driver.findElement(By.id("username")).sendKeys("rakeshdube17");
 			
 
@@ -47,7 +56,7 @@ public class GSTINSTATUS extends Base {
 	         			driver.findElement(By.xpath("//div[@class='col-lg-6 col-md-6 col-sm-6 col-xs-6']/button")).click();
 	
 			
-			System.setProperty("org.uncommons.reportng.escape-output", "false");
+			
 			driver.manage().window().maximize();
 			Thread.sleep(5000);
 			
@@ -163,9 +172,16 @@ public class GSTINSTATUS extends Base {
 	}//class
 	
 
-
+/*
              @Test
               public void PANSEARCH1() throws Exception {
+            	 System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Desktop\\Efiling\\src\\test\\resources\\drivers\\chromedriver.exe");
+            	 WebDriver driver = new ChromeDriver();
+            	
+            	 
+					driver.get("https://services.gst.gov.in/services/login");
+					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					Thread.sleep(2000);
 			WebDriverWait wait = new WebDriverWait(driver,30);
 			driver.findElement(By.id("username")).sendKeys("rakeshdube17");
 	
@@ -186,7 +202,7 @@ public class GSTINSTATUS extends Base {
      			driver.findElement(By.xpath("//div[@class='col-lg-6 col-md-6 col-sm-6 col-xs-6']/button")).click();
 
 	
-	System.setProperty("org.uncommons.reportng.escape-output", "false");
+
 	driver.manage().window().maximize();
 	Thread.sleep(5000);
 	
@@ -299,8 +315,8 @@ File src=new File("E:\\ICEGATELOGIN\\Sample.xlsx");
 		
 	}
 
+}*/
 }//class
-}
 
 	
 

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 	import org.testng.Reporter;
 	import org.testng.annotations.Test;
 	import Base.Base;
+import Base.ObjectRepository;
 		
 
 
@@ -30,14 +31,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 					Reporter.log("<a href="+path+">Login Page</a>");
 					WebDriverWait wait = new WebDriverWait(driver,30);
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
-					driver.findElement(By.xpath(prop.getProperty("username"))).sendKeys("TGDSUSER1@tg.in"); 
-					driver.findElement(By.xpath(prop.getProperty("password"))).sendKeys("Dev@tg123");
+					driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("TGDSUSER1@tg.in"); 
+					driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Dev@tg123");
 					
-					String Cap = driver.findElement(By.xpath(prop.getProperty("captcha"))).getText();
+					String Cap = driver.findElement(By.xpath(ObjectRepository.captcha)).getText();
 					Reporter.log("Copied Captcha");
-					driver.findElement(By.xpath(prop.getProperty("captchaText"))).sendKeys(Cap);
+					driver.findElement(By.xpath(ObjectRepository.captchaText)).sendKeys(Cap);
 					Reporter.log("Entered Captcha");
-					driver.findElement(By.xpath(prop.getProperty("LogIn"))).click();
+					driver.findElement(By.xpath(ObjectRepository.LogIn)).click();
 					Reporter.log("Login Successful");
 					Thread.sleep(3000);
 					path = Base.captureScreenShot("TGDSLoggedIN");

@@ -11,6 +11,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import Base.ObjectRepository;
 
 public class View_GSTR1_Invoice extends Base {
 	String path = null;
@@ -25,15 +26,15 @@ public class View_GSTR1_Invoice extends Base {
 		             path = Base.captureScreenShot("E-filingView");
 		 			Reporter.log("<a href="+path+">E-filingView</a>");
 
-	driver.findElement(By.xpath(prop.getProperty("Year"))).click();
+	driver.findElement(By.xpath(ObjectRepository.Year)).click();
 	Thread.sleep(2000);
 	System.out.println("Selected Year drop down");
 	driver.findElement(By.linkText("2018-2019")).click();
 	System.out.println("Selected 2018-2019");
 	Thread.sleep(12000);
 	
-	wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(prop.getProperty("month")))));
-	driver.findElement(By.xpath(prop.getProperty("month"))).click();
+	wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(ObjectRepository.month))));
+	driver.findElement(By.xpath(ObjectRepository.month)).click();
 	driver.findElement(By.linkText("Nov 2018")).click();
 	
 	Thread.sleep(6000);
@@ -59,9 +60,9 @@ public class View_GSTR1_Invoice extends Base {
 			
 		
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("ViewB2B"))));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ObjectRepository.ViewB2B)));
 Thread.sleep(5000);
-		driver.findElement(By.xpath(prop.getProperty("ViewB2B"))).click();
+		driver.findElement(By.xpath(ObjectRepository.ViewB2B)).click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		js.executeScript("window.scrollTo(0,document.body.scrollHeight)");

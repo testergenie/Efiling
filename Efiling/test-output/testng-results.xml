@@ -2,54 +2,60 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[object reporsitory is loaded]]>
+      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoginPage_16_09_2019_11_43_54.png>LoginPage</a>]]>
     </line>
     <line>
-      <![CDATA[config file is loaded]]>
+      <![CDATA[Entered Captcha]]>
     </line>
     <line>
-      <![CDATA[Chrome opened]]>
+      <![CDATA[Login Successful]]>
     </line>
     <line>
-      <![CDATA[all file are loaded]]>
+      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoggedIN_16_09_2019_11_44_16.png>LoggedIN</a>]]>
     </line>
     <line>
-      <![CDATA[browser is launched]]>
+      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\WorkOnThis_16_09_2019_11_44_22.png>WorkOnThis</a>]]>
+    </line>
+    <line>
+      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\E-FILING_16_09_2019_11_44_29.png>product</a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1038049" started-at="2019-04-22T12:11:11Z" finished-at="2019-04-22T12:28:29Z">
+  <suite name="Command line suite" duration-ms="61612" started-at="2019-09-16T06:13:49Z" finished-at="2019-09-16T06:14:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1038049" started-at="2019-04-22T12:11:11Z" finished-at="2019-04-22T12:28:29Z">
-      <class name="GOVGSTINSTATUS.GSTINSTATUS$Pansearch">
-        <test-method status="PASS" signature="LaunchBrowser()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="LaunchBrowser" is-config="true" duration-ms="5895" started-at="2019-04-22T12:11:05Z" finished-at="2019-04-22T12:11:11Z">
-          <reporter-output>
-            <line>
-              <![CDATA[object reporsitory is loaded]]>
-            </line>
-            <line>
-              <![CDATA[config file is loaded]]>
-            </line>
-            <line>
-              <![CDATA[Chrome opened]]>
-            </line>
-            <line>
-              <![CDATA[all file are loaded]]>
-            </line>
-            <line>
-              <![CDATA[browser is launched]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- LaunchBrowser -->
-        <test-method status="PASS" signature="PANSEARCH()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="PANSEARCH" duration-ms="1038042" started-at="2019-04-22T12:11:11Z" description="Enter Pan and Captcha" finished-at="2019-04-22T12:28:29Z">
+    <test name="Command line test" duration-ms="61612" started-at="2019-09-16T06:13:49Z" finished-at="2019-09-16T06:14:51Z">
+      <class name="Rough.Rough1">
+        <test-method status="PASS" signature="configProperty()[pri:0, instance:Rough.Rough1@591f989e]" name="configProperty" is-config="true" duration-ms="31983" started-at="2019-09-16T06:13:17Z" finished-at="2019-09-16T06:13:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PANSEARCH -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:GOVGSTINSTATUS.GSTINSTATUS$Pansearch@d6da883]" name="tearDown" is-config="true" duration-ms="3565" started-at="2019-04-22T12:28:29Z" finished-at="2019-04-22T12:28:32Z">
+        </test-method> <!-- configProperty -->
+        <test-method status="PASS" signature="LoginPage()[pri:0, instance:Rough.Rough1@591f989e]" name="LoginPage" duration-ms="61568" started-at="2019-09-16T06:13:49Z" description="login in TG admin Portal" finished-at="2019-09-16T06:14:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoginPage_16_09_2019_11_43_54.png>LoginPage</a>]]>
+            </line>
+            <line>
+              <![CDATA[Entered Captcha]]>
+            </line>
+            <line>
+              <![CDATA[Login Successful]]>
+            </line>
+            <line>
+              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoggedIN_16_09_2019_11_44_16.png>LoggedIN</a>]]>
+            </line>
+            <line>
+              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\WorkOnThis_16_09_2019_11_44_22.png>WorkOnThis</a>]]>
+            </line>
+            <line>
+              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\E-FILING_16_09_2019_11_44_29.png>product</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Rough.Rough1@591f989e]" name="tearDown" is-config="true" duration-ms="3658" started-at="2019-09-16T06:14:51Z" finished-at="2019-09-16T06:14:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- GOVGSTINSTATUS.GSTINSTATUS$Pansearch -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Rough.Rough1 -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

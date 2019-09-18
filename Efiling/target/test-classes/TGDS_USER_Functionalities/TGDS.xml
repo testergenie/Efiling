@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TGDS_Functions">
+  <test thread-count="5" name="TGDS_USER_Login">
+    <classes>
+      <class name="TGDS_USER_Functionalities.TGDS_User_Login"/>
+    </classes>
+  </test> <!-- TGDS_USER_Login -->
+</suite> <!-- TGDS_Functions -->

@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import Base.ObjectRepository;
 
 public class DashboardPage1 extends Base{
 	String path = null;
@@ -19,12 +20,12 @@ public class DashboardPage1 extends Base{
 		
 		
 		WebDriverWait wait = new WebDriverWait(driver,30);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("Demonewbutn"))));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ObjectRepository.Demonewbutn)));
 			path = Base.captureScreenShot("LOC");
 			
 			Reporter.log("<a href="+path+">LOC</a>");
 					
-			driver.findElement(By.xpath(prop.getProperty("Demonewbutn"))).click();
+			driver.findElement(By.xpath(ObjectRepository.Demonewbutn)).click();
 		
 			
 			Reporter.log("Selected company");

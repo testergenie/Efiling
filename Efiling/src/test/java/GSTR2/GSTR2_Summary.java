@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import Base.ObjectRepository;
 
 public class GSTR2_Summary extends Base{
 	String path =null;
@@ -16,9 +17,9 @@ public class GSTR2_Summary extends Base{
 	public void GSTR2Summary() {
 		try { 
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(prop.getProperty("GSTR1"))));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ObjectRepository.GSTR1)));
 		Thread.sleep(3000);
-		driver.findElement(By.xpath(prop.getProperty("GSTR2"))).click();
+		driver.findElement(By.xpath(ObjectRepository.GSTR2)).click();
 		path = Base.captureScreenShot("GSTR2Summary");
 		Reporter.log("<a href="+path+">GSTR2Summary</a>");
 		Thread.sleep(3000);

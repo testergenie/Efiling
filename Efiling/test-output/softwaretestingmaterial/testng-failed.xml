@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [softwaretestingmaterial]" parallel="methods">
+  <test thread-count="2" name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="GOVGSTINSTATUS.GSTINSTATUS">
+        <methods>
+          <include name="PANSEARCH"/>
+          <include name="PANSEARCH1"/>
+        </methods>
+      </class> <!-- GOVGSTINSTATUS.GSTINSTATUS -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [softwaretestingmaterial] -->

@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Base.Base;
+import Base.ObjectRepository;
 
 
 
@@ -22,10 +23,10 @@ public class E_filing extends Base{
 	
 try {
 	WebDriverWait	wait = new WebDriverWait(driver,30);
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("efiling"))));
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ObjectRepository.efiling)));
 	path = Base.captureScreenShot("E-filing selection TAB");
 	Reporter.log("<a href="+path+">E-filing selection TAB</a>");
-	driver.findElement(By.xpath(prop.getProperty("efiling"))).click();
+	driver.findElement(By.xpath(ObjectRepository.efiling)).click();
 	
 }
 catch(Exception e) {

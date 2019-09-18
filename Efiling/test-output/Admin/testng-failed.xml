@@ -9,7 +9,9 @@
     <classes>
       <class name="Admin_Module.TGDS_Create">
         <methods>
+          <include name="TGDSusercreation"/>
           <include name="tearDown"/>
+          <include name="TGDSUserMapping"/>
           <include name="LaunchBrowser"/>
           <include name="TGDSCompanycreation"/>
         </methods>

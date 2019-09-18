@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GOVGSTINSTATUS.GSTINSTATUS$Pansearch">
+      <class name="Mismatch.TaxableValueSelction">
         <methods>
-          <include name="PANSEARCH"/>
-          <include name="tearDown"/>
-          <include name="LaunchBrowser"/>
+          <include name="TAXSELECT"/>
         </methods>
-      </class> <!-- GOVGSTINSTATUS.GSTINSTATUS$Pansearch -->
+      </class> <!-- Mismatch.TaxableValueSelction -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
