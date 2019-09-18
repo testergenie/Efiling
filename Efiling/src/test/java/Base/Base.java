@@ -24,7 +24,7 @@ public class Base {
 	public static void configProperty() {
 
 		try {
-//saurav singh
+			
 			if (ConfigProp.browser == "chrome") {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
