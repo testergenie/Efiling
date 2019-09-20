@@ -1,5 +1,10 @@
 package Base;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -127,6 +132,36 @@ public class Base {
 		return path;
 	}
 
+	public static String fileChooser(String filechoose) {
+		try {
+
+			Robot r=new Robot();
+			//Create instance of Robot class
+			   Robot robot = new Robot();
+			//Create instance of Clipboard class
+			   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+			//Set the String to Enter
+			  StringSelection stringSelection = new StringSelection(filechoose);
+			//Copy the String to Clipboard
+			  clipboard.setContents(stringSelection, null);
+			//Use Robot class instance to simulate CTRL+C and CTRL+V key events :
+
+			  robot.keyPress(KeyEvent.VK_CONTROL);
+			  robot.keyPress(KeyEvent.VK_V);
+			  robot.keyRelease(KeyEvent.VK_V);
+			  robot.keyRelease(KeyEvent.VK_CONTROL);
+			//Simulate Enter key event
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			System.out.println(e +" issue with filechooser method");
+		}
+		return filechoose;
+	}
+	
 	@AfterSuite
 	public void tearDown() throws Exception {
 		Thread.sleep(3000);

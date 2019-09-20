@@ -62,6 +62,6 @@ public class ObjectRepository {
 		public static String MONTHCLICK="//*[@id=\"setFootertopmargin\"]/app-upload-data/div/div[1]/div/div/app-datepicker/div/div[2]/ng-select/div/div/div[3]";
 		public static String monhtlist="//app-upload-data/div/div[1]/div/div/app-datepicker/div/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span";
 		
-		public static String chooseFile="//app-upload-data/div/div[1]/div/div/div/div[2]/div[3]/p-fileupload/div/div[1]/span/span[1]";
+		public static String chooseFile="//app-upload-data/div/div[1]/div/div/div/div[2]/div[3]/p-fileupload/div/div[1]/span";
 		
 }
