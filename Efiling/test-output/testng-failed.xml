@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Command line suite]">
-  <test thread-count="5" name="Command line test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Admin_Module.SP_Role_Mapping">
+      <class name="Admin_Module.SPCA_Create">
         <methods>
-          <include name="SPRole"/>
+          <include name="SPCACOMPANYcreation"/>
+          <include name="tearDown"/>
+          <include name="configProperty"/>
         </methods>
-      </class> <!-- Admin_Module.SP_Role_Mapping -->
+      </class> <!-- Admin_Module.SPCA_Create -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

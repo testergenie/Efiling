@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Mismatch.TaxableValueSelction">
+      <class name="Admin_Module.SPCA_Create">
         <methods>
-          <include name="TAXSELECT"/>
+          <include name="SPCACOMPANYcreation"/>
+          <include name="tearDown"/>
+          <include name="configProperty"/>
         </methods>
-      </class> <!-- Mismatch.TaxableValueSelction -->
+      </class> <!-- Admin_Module.SPCA_Create -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
