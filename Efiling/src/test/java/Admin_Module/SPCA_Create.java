@@ -52,6 +52,7 @@ public class SPCA_Create extends Base {
 					"//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[2]/div/div/ng-select/div/div/div[2]/input"))
 					.sendKeys("SPCA_Product");
 			Robot robot = new Robot();
+<<<<<<< Upstream, based on branch 'master' of https://github.com/testergenie/Efiling.git
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 
@@ -97,6 +98,43 @@ public class SPCA_Create extends Base {
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
+=======
+	        robot.keyPress(KeyEvent.VK_ENTER);
+	        robot.keyRelease(KeyEvent.VK_ENTER);
+	        
+	        //SPCA Center Name*
+	       //testing this for rama and saurav cause
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[3]/div/div/input")).sendKeys(SPCAAUTTEST);
+	        //Address
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[4]/div/div/textarea")).sendKeys("Address TEST");
+	        //State
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[5]/div/div/input")).sendKeys("Maharastra");
+	        //City
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[6]/div/div/input")).sendKeys("Mumbai");
+	        //Designation Select
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[7]/div/div/ng-select/div/span")).click();
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[7]/div/div/ng-select/div/div/div[2]/input")).sendKeys("Manager");
+	        robot.keyPress(KeyEvent.VK_ENTER);
+	        robot.keyRelease(KeyEvent.VK_ENTER);
+	        //PinCode
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[8]/div/div/input")).sendKeys("400101");
+	        //Contact Person Name
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[9]/div/div/input")).sendKeys("Automation Engineer");
+	        //Contact Number
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[10]/div/div/input")).sendKeys("9999999999");
+	        //Contact Email
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div/div/div/div[2]/form/div/div[11]/div/div/input")).sendKeys("Aut1@sele.in");
+	        Thread.sleep(3000);
+	        
+	        
+	        //Submit
+	        driver.findElement(By.xpath("//div/app-sp-ca-creation/div[3]/div/div/div[3]/button[1]")).click();
+	        
+	        Thread.sleep(2000);
+	       
+	        }
+		catch(Exception e){
+>>>>>>> c27a3ba Update SPCA_Create.java
 			System.out.println(e);
 			Assert.fail();
 
