@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Command line suite]">
-  <test thread-count="5" name="Command line test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Admin]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="TGDS Creation(failed)">
     <classes>
-      <class name="Admin_Module.SP_Role_Mapping">
+      <class name="Admin_Module.TGDS_Create">
         <methods>
-          <include name="SPRole"/>
+          <include name="TGDSusercreation"/>
+          <include name="tearDown"/>
+          <include name="configProperty"/>
+          <include name="TGDSUserMapping"/>
+          <include name="TGDSCompanycreation"/>
         </methods>
-      </class> <!-- Admin_Module.SP_Role_Mapping -->
+      </class> <!-- Admin_Module.TGDS_Create -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- TGDS Creation(failed) -->
+</suite> <!-- Failed suite [Admin] -->

@@ -11,8 +11,8 @@
         <methods>
           <include name="TGDSusercreation"/>
           <include name="tearDown"/>
+          <include name="configProperty"/>
           <include name="TGDSUserMapping"/>
-          <include name="LaunchBrowser"/>
           <include name="TGDSCompanycreation"/>
         </methods>
       </class> <!-- Admin_Module.TGDS_Create -->

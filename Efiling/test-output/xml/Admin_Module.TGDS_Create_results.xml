@@ -4,9 +4,9 @@
            failures="3"
            errors="0"
            skipped="0"
-           time="165.989">
+           time="12.822">
   <properties />
-            <testcase name="TGDSusercreation" time="95.246" classname="Admin_Module.TGDS_Create">
+            <testcase name="TGDSusercreation" time="2.176" classname="Admin_Module.TGDS_Create">
                 <failure type="java.lang.AssertionError"
                   message="null"
               >
@@ -43,7 +43,7 @@
       </failure>
 
           </testcase>
-            <testcase name="TGDSUserMapping" time="34.191" classname="Admin_Module.TGDS_Create">
+            <testcase name="TGDSUserMapping" time="4.122" classname="Admin_Module.TGDS_Create">
                 <failure type="java.lang.AssertionError"
                   message="null"
               >
@@ -80,7 +80,7 @@
       </failure>
 
           </testcase>
-            <testcase name="TGDSCompanycreation" time="36.552" classname="Admin_Module.TGDS_Create">
+            <testcase name="TGDSCompanycreation" time="6.524" classname="Admin_Module.TGDS_Create">
                 <failure type="java.lang.AssertionError"
                   message="null"
               >

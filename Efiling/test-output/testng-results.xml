@@ -1,61 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoginPage_16_09_2019_11_43_54.png>LoginPage</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Captcha]]>
-    </line>
-    <line>
-      <![CDATA[Login Successful]]>
-    </line>
-    <line>
-      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoggedIN_16_09_2019_11_44_16.png>LoggedIN</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\WorkOnThis_16_09_2019_11_44_22.png>WorkOnThis</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\E-FILING_16_09_2019_11_44_29.png>product</a>]]>
-    </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="61612" started-at="2019-09-16T06:13:49Z" finished-at="2019-09-16T06:14:51Z">
+  <suite name="Default suite" duration-ms="43362" started-at="2019-09-30T05:21:52Z" finished-at="2019-09-30T05:22:35Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="61612" started-at="2019-09-16T06:13:49Z" finished-at="2019-09-16T06:14:51Z">
-      <class name="Rough.Rough1">
-        <test-method status="PASS" signature="configProperty()[pri:0, instance:Rough.Rough1@591f989e]" name="configProperty" is-config="true" duration-ms="31983" started-at="2019-09-16T06:13:17Z" finished-at="2019-09-16T06:13:49Z">
+    <test name="Default test" duration-ms="43362" started-at="2019-09-30T05:21:52Z" finished-at="2019-09-30T05:22:35Z">
+      <class name="Recon.RBL_Recon">
+        <test-method status="PASS" signature="configProperty()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="configProperty" is-config="true" duration-ms="32377" started-at="2019-09-30T05:21:20Z" finished-at="2019-09-30T05:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configProperty -->
-        <test-method status="PASS" signature="LoginPage()[pri:0, instance:Rough.Rough1@591f989e]" name="LoginPage" duration-ms="61568" started-at="2019-09-16T06:13:49Z" description="login in TG admin Portal" finished-at="2019-09-16T06:14:51Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="Login" duration-ms="28238" started-at="2019-09-30T05:21:52Z" description="login in TG admin Portal" finished-at="2019-09-30T05:22:20Z">
           <reporter-output>
-            <line>
-              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoginPage_16_09_2019_11_43_54.png>LoginPage</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Captcha]]>
-            </line>
-            <line>
-              <![CDATA[Login Successful]]>
-            </line>
-            <line>
-              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\LoggedIN_16_09_2019_11_44_16.png>LoggedIN</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\WorkOnThis_16_09_2019_11_44_22.png>WorkOnThis</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a href=C:\Users\Saurav\git\Efiling\Efiling\screenshots\E-FILING_16_09_2019_11_44_29.png>product</a>]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- LoginPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Rough.Rough1@591f989e]" name="tearDown" is-config="true" duration-ms="3658" started-at="2019-09-16T06:14:51Z" finished-at="2019-09-16T06:14:55Z">
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="Company_Select()[pri:1, instance:Recon.RBL_Recon@50b494a6]" name="Company_Select" duration-ms="15058" started-at="2019-09-30T05:22:20Z" description="Company Selection" finished-at="2019-09-30T05:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Company_Select -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="tearDown" is-config="true" duration-ms="3686" started-at="2019-09-30T05:22:35Z" finished-at="2019-09-30T05:22:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Rough.Rough1 -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+      </class> <!-- Recon.RBL_Recon -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
