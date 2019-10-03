@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Admin]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-  </listeners>
-  <test thread-count="5" name="TGDS Creation(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Admin_Module.TGDS_Create">
+      <class name="Recon.RBL_Recon">
         <methods>
-          <include name="TGDSusercreation"/>
           <include name="tearDown"/>
           <include name="configProperty"/>
-          <include name="TGDSUserMapping"/>
-          <include name="TGDSCompanycreation"/>
+          <include name="Company_Select"/>
         </methods>
-      </class> <!-- Admin_Module.TGDS_Create -->
+      </class> <!-- Recon.RBL_Recon -->
     </classes>
-  </test> <!-- TGDS Creation(failed) -->
-</suite> <!-- Failed suite [Admin] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

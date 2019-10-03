@@ -49,13 +49,36 @@ public class RBL_Recon extends Base{
 	public void Company_Select() throws Exception {
 		By ORGCreation = By.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/div/div/div[1]/div/table/thead/tr[1]/th[1]");
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(ORGCreation));
+		Thread.sleep(2000);
 		
 		try{
 			WebElement Search = driver.findElement(By.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/div/div/input"));
 			String OrganisationName = JOptionPane.showInputDialog("Please enter the Organisation Name:");
 			Search.sendKeys(OrganisationName);
-			String a[] = new String [100];
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/div/div/div[2]/table/tbody/tr[1]/td[8]/button")).click();
+			
+			//Recon Product Selection
+			for (int i = 1; i < 15; i++) {
+				
+				WebElement  Product = driver.findElement(By.xpath("/html/body/app-root/div/div/div/div/app-product-page/div[2]/div[" + i + "]/a/div/h2"));
+				wait.until(ExpectedConditions.visibilityOf(Product));
+				String Product_Name = Product.getText();
+				System.out.println(Product_Name);
+				
+				if(Product_Name.equals("RECONCILIATION")) {
+					wait.until(ExpectedConditions.elementToBeClickable(Product));
+				Product.click();
+					break;
+				}//if 
+				else {
+					System.out.println("No Recon Prod");
+					return;
+					}//else
+			
+			
+			
+			/*String a[] = new String [100];
 			for (int i = 1; i <= 100; i++) {
 				WebElement state = driver.findElement(By.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/div/div/div[2]/table/tbody/tr["+i+"]/td[3]"));
 				if(state.isDisplayed()) {
@@ -66,8 +89,12 @@ public class RBL_Recon extends Base{
 				else {
 					break;
 				}//else
-			}//for
-			System.out.println(a.length);
+*/			
+				}//for
+//			System.out.println(a.length);
+		
+		
+		
 			
 		
 			
