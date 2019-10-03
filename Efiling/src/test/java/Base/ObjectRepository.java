@@ -3,12 +3,20 @@ package Base;
 public class ObjectRepository {
 	
 	// # login page
+	public static String name_xpath = "//*[@id=\"user\"]";
 		public static String username = "//*[@id=\"user\"]";
 		public static String password = "//*[@id=\"password\"]";
 		public static String captcha = "//*[@id=\"captcha\"]";
 		public static String captchaText = "//*[@id=\"captcha1\"]";
 		public static String LogIn = "//*[@id=\"save\"]";
 
+		
+		public static String lastPage="/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/p-paginator/div/a[4]";
+		public static String lastpage1="/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/p-paginator/div/span";
+		
+		//compnay selection
+		
+		public static String pageNo="/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/p-paginator/div/span/a[1]";
 		//#dashboard
 		public static String efiling="/html/body/app-root/div/div/div/div/app-main-login/div[2]/div[1]/a/div/div[1]/div[2]/h2";
 		public static String Taxfiling="//*[@id=\"tax-filling\"]/div/div/div/h2";
@@ -63,5 +71,21 @@ public class ObjectRepository {
 		public static String monhtlist="//app-upload-data/div/div[1]/div/div/app-datepicker/div/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span";
 		
 		public static String chooseFile="//app-upload-data/div/div[1]/div/div/div/div[2]/div[3]/p-fileupload/div/div[1]/span";
+		
+		
+		
+		//reconciliation
+		
+		public static String reconFY="//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[1]/ng-select/div/div/div[3]";
+		public static String reconFY1="//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span";
+		
+		public static String reconM1="//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[2]/ng-select/div/div/div[3]";
+		public static String reconMD1="//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span";
+		
+		public static String reconM2="//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[3]/ng-select/div/div/div[3]";
+		public static String reconMD2="//*[@id=\"setFootertopmargin\"]/app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[3]/ng-select/ng-dropdown-panel/div/div[2]/div[1]/span";
+		public static String reconSubmit="//app-reconcilation/div/div/div/div/div[3]/div/button";
+		
+		public static String gstr2abutton="//app-reconcilation/div[1]/div/div/div/div[5]/table/tbody/tr[7]/td[10]/button";
 		
 }

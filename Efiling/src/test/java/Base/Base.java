@@ -6,9 +6,12 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import javax.swing.JFileChooser;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,14 +25,17 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 
+	static String fileDictName = "";
 	public static WebDriver driver;
+	public static String url;
+	public static WebDriverWait wait;
+	
 
-	WebDriverWait wait;
 	@BeforeSuite
 	public static void configProperty() {
 
 		try {
-			
+
 			if (ConfigProp.browser == "chrome") {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
@@ -49,31 +55,40 @@ public class Base {
 
 	}
 
+	public void click_Xpath(String locator) {
 
+	
+		driver.findElement(By.xpath(locator)).click();
+
+	}
+
+	public void type_Xpath(String locator, String value) {
+		driver.findElement(By.xpath(locator)).sendKeys(value);
+
+	}
+
+	public void click_CSS(String locator) {
+	
+		driver.findElement(By.cssSelector(locator)).click();
+
+	}
+
+	public void type_CSS(String locator, String value) {
+
+		driver.findElement(By.cssSelector(locator)).sendKeys(value);
+
+	}
+
+	public void click_ID(String locator) {
+		driver.findElement(By.id(locator)).click();
+	}
+
+	public void type_ID(String locator, String value) {
+		driver.findElement(By.id(locator)).sendKeys(value);
+		//dfg
+	}
 
 	/*
-	 * public void click(String locator) {
-	 * 
-	 * if (locator.endsWith("_CSS")) {
-	 * driver.findElement(By.cssSelector(prop.getProperty(locator))).click(); } else
-	 * if (locator.endsWith("_XPATH")) {
-	 * driver.findElement(By.xpath(prop.getProperty(locator))).click(); } else if
-	 * (locator.endsWith("_ID")) {
-	 * driver.findElement(By.id(prop.getProperty(locator))).click(); }
-	 * 
-	 * }
-	 * 
-	 * public void type(String locator, String value) {
-	 * 
-	 * if (locator.endsWith("_CSS")) {
-	 * driver.findElement(By.cssSelector(prop.getProperty(locator))).sendKeys(value)
-	 * ; } else if (locator.endsWith("_XPATH")) {
-	 * driver.findElement(By.xpath(prop.getProperty(locator))).sendKeys(value); }
-	 * else if (locator.endsWith("_ID")) {
-	 * driver.findElement(By.id(prop.getProperty(locator))).sendKeys(value); }
-	 * 
-	 * }
-	 * 
 	 * static WebElement dropdown;
 	 * 
 	 * public void select(String locator, String value) {
@@ -88,9 +103,9 @@ public class Base {
 	 * Select select = new Select(dropdown); select.selectByVisibleText(value);
 	 * 
 	 * }
+	 * 
+	 * public static String testpath = null;
 	 */
-//	public static String testpath = null;
-
 	public static String captureScreenShot(String screenshot) {
 		String path = null;
 		try {
@@ -135,37 +150,91 @@ public class Base {
 	public static String fileChooser(String filechoose) {
 		try {
 
-			Robot r=new Robot();
-			//Create instance of Robot class
-			   Robot robot = new Robot();
-			//Create instance of Clipboard class
-			   Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			//Set the String to Enter
-			  StringSelection stringSelection = new StringSelection(filechoose);
-			//Copy the String to Clipboard
-			  clipboard.setContents(stringSelection, null);
-			//Use Robot class instance to simulate CTRL+C and CTRL+V key events :
+			Robot r = new Robot();
+			// Create instance of Robot class
+			Robot robot = new Robot();
+			// Create instance of Clipboard class
+			Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+			// Set the String to Enter
+			StringSelection stringSelection = new StringSelection(filechoose);
+			// Copy the String to Clipboard
+			clipboard.setContents(stringSelection, null);
+			// Use Robot class instance to simulate CTRL+C and CTRL+V key events :
 
-			  robot.keyPress(KeyEvent.VK_CONTROL);
-			  robot.keyPress(KeyEvent.VK_V);
-			  robot.keyRelease(KeyEvent.VK_V);
-			  robot.keyRelease(KeyEvent.VK_CONTROL);
-			//Simulate Enter key event
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			// Simulate Enter key event
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
-			
+
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println(e +" issue with filechooser method");
+			System.out.println(e + " issue with filechooser method");
 		}
 		return filechoose;
 	}
-	
-	@AfterSuite
+
+	public static String fileURL(String test) {
+		try {
+			test = "1";
+			JFileChooser fileChooser = new JFileChooser();
+			fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+			fileChooser.setAcceptAllFileFilterUsed(false);
+			fileChooser.setDialogTitle("Save the dictionary file");
+			fileChooser.setSelectedFile(new File(url));
+			int userSelection = fileChooser.showSaveDialog(fileChooser);
+			if (userSelection == JFileChooser.APPROVE_OPTION) {
+				url = fileChooser.getSelectedFile().getAbsolutePath();
+				System.out.println(url);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return url;
+	}
+
+	public static String urlMethod() {
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+		fileChooser.setAcceptAllFileFilterUsed(false);
+		fileChooser.setDialogTitle("Save the dictionary file");
+		fileChooser.setSelectedFile(new File(fileDictName));
+		int userSelection = fileChooser.showSaveDialog(fileChooser);
+		if (userSelection == JFileChooser.APPROVE_OPTION) {
+			fileDictName = fileChooser.getSelectedFile().getAbsolutePath();
+			System.out.println(fileDictName);
+		}
+		return fileDictName;
+	}
+
+	public static void matchMethod() {
+		try {
+			Robot r = new Robot();
+			r.keyPress(KeyEvent.VK_TAB);
+			r.keyRelease(KeyEvent.VK_TAB);
+
+			r.keyPress(KeyEvent.VK_TAB);
+			r.keyRelease(KeyEvent.VK_TAB);
+
+			r.keyPress(KeyEvent.VK_TAB);
+			r.keyRelease(KeyEvent.VK_TAB);
+			
+			r.keyPress(KeyEvent.VK_ENTER);
+			r.keyRelease(KeyEvent.VK_ENTER);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+	}
+	/*@AfterSuite
 	public void tearDown() throws Exception {
 		Thread.sleep(3000);
 		driver.quit();
 
-	}
+	}*/
 }

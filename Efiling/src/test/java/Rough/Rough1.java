@@ -26,6 +26,8 @@ public class Rough1 extends Base {
 			Reporter.log("<a href=" + path + ">LoginPage</a>");
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
+			
+
 
 			driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("saurav@taxgenie.in");
 			driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Taxgenie@123");
@@ -114,5 +116,7 @@ public class Rough1 extends Base {
 		}
 
 	}
+	
+	
 
 }

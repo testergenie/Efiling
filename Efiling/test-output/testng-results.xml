@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_20_09_2019_03_23_44.png>LoginPage</a>]]>
+      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_03_10_2019_04_53_46.png>LoginPage</a>]]>
     </line>
     <line>
       <![CDATA[Entered Captcha]]>
@@ -11,28 +11,28 @@
       <![CDATA[Login Successful]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_20_09_2019_03_23_57.png>LoggedIN</a>]]>
+      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_03_10_2019_04_53_59.png>LoggedIN</a>]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_20_09_2019_03_24_03.png>WorkOnThis</a>]]>
+      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_03_10_2019_04_54_03.png>WorkOnThis</a>]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\E-FILING_20_09_2019_03_24_10.png>E-FILING</a>]]>
+      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\RECONCILIATION_03_10_2019_04_54_08.png>RECONCILIATION</a>]]>
     </line>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="104581" started-at="2019-09-20T09:53:39Z" finished-at="2019-09-20T09:55:24Z">
+  <suite name="Default suite" duration-ms="61409" started-at="2019-10-03T11:23:43Z" finished-at="2019-10-03T11:24:45Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="104581" started-at="2019-09-20T09:53:39Z" finished-at="2019-09-20T09:55:24Z">
-      <class name="GSTR1.Login">
-        <test-method status="PASS" signature="configProperty()[pri:0, instance:GSTR1.Login@66048bfd]" name="configProperty" is-config="true" duration-ms="14902" started-at="2019-09-20T09:53:24Z" finished-at="2019-09-20T09:53:39Z">
+    <test name="Default test" duration-ms="61409" started-at="2019-10-03T11:23:43Z" finished-at="2019-10-03T11:24:45Z">
+      <class name="reconciliation.ReconciliationProduct">
+        <test-method status="PASS" signature="configProperty()[pri:0, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="configProperty" is-config="true" duration-ms="34206" started-at="2019-10-03T11:23:09Z" finished-at="2019-10-03T11:23:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configProperty -->
-        <test-method status="PASS" signature="LoginPage()[pri:0, instance:GSTR1.Login@66048bfd]" name="LoginPage" duration-ms="34042" started-at="2019-09-20T09:53:39Z" description="login in TG Portal" finished-at="2019-09-20T09:54:13Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="Login" duration-ms="16568" started-at="2019-10-03T11:23:43Z" description="login done" finished-at="2019-10-03T11:24:00Z">
           <reporter-output>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_20_09_2019_03_23_44.png>LoginPage</a>]]>
+              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_03_10_2019_04_53_46.png>LoginPage</a>]]>
             </line>
             <line>
               <![CDATA[Entered Captcha]]>
@@ -41,27 +41,29 @@
               <![CDATA[Login Successful]]>
             </line>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_20_09_2019_03_23_57.png>LoggedIN</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_20_09_2019_03_24_03.png>WorkOnThis</a>]]>
-            </line>
-            <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\E-FILING_20_09_2019_03_24_10.png>E-FILING</a>]]>
+              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_03_10_2019_04_53_59.png>LoggedIN</a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- LoginPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:GSTR1.Login@66048bfd]" name="tearDown" is-config="true" duration-ms="3657" started-at="2019-09-20T09:55:24Z" finished-at="2019-09-20T09:55:28Z">
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="companySelection()[pri:1, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="companySelection" duration-ms="3547" started-at="2019-10-03T11:24:00Z" description="company selection tab" finished-at="2019-10-03T11:24:03Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_03_10_2019_04_54_03.png>WorkOnThis</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- companySelection -->
+        <test-method status="PASS" signature="ReconProduct()[pri:2, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="ReconProduct" duration-ms="7515" started-at="2019-10-03T11:24:03Z" description="recon product selected" finished-at="2019-10-03T11:24:11Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\RECONCILIATION_03_10_2019_04_54_08.png>RECONCILIATION</a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ReconProduct -->
+        <test-method status="PASS" signature="periodforRecon()[pri:3, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="periodforRecon" duration-ms="33714" started-at="2019-10-03T11:24:11Z" description="selecting financial year and month   " finished-at="2019-10-03T11:24:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- GSTR1.Login -->
-      <class name="GSTR1.Upload">
-        <test-method status="PASS" signature="purchaseUpload()[pri:1, instance:GSTR1.Upload@61443d8f]" name="purchaseUpload" duration-ms="70365" started-at="2019-09-20T09:54:13Z" description="testing the upload for purchase" finished-at="2019-09-20T09:55:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- purchaseUpload -->
-      </class> <!-- GSTR1.Upload -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+        </test-method> <!-- periodforRecon -->
+      </class> <!-- reconciliation.ReconciliationProduct -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

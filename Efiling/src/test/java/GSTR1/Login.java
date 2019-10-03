@@ -13,6 +13,7 @@ import Base.ObjectRepository;
 public class Login extends Base {
 	public static String product;
 
+	
 	@Test(priority = 0, description = "login in TG Portal")
 	public void LoginPage() throws Exception {
 		String path;
@@ -24,15 +25,15 @@ public class Login extends Base {
 			Reporter.log("<a href=" + path + ">LoginPage</a>");
 			WebDriverWait wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
-
-			driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("saurav@taxgenie.in");
-			driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Taxgenie@123");
-			String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
+			
+			type_Xpath(ObjectRepository.username, "saurav@taxgenie.in");
+			type_Xpath(ObjectRepository.password, "Taxgenie@123");
+			 String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 			Thread.sleep(2000);
-			driver.findElement(By.xpath(ObjectRepository.captchaText)).sendKeys(captchaVal);
+			type_Xpath(ObjectRepository.captchaText, captchaVal);
 			Reporter.log("Entered Captcha");
-			driver.findElement(By.xpath(ObjectRepository.LogIn)).click();
-
+			click_Xpath(ObjectRepository.LogIn);
+	
 			Reporter.log("Login Successful");
 			Thread.sleep(3000);
 			path = Base.captureScreenShot("LoggedIN");
