@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="28.414">
+           time="44.296">
   <properties />
   
   
-            <testcase name="LoginPage" time="28.414" classname="Admin_Module.Login_Functionality$Login1" />
+            <testcase name="LoginPage" time="44.296" classname="Admin_Module.Login_Functionality$Login1" />
       
 </testsuite>
