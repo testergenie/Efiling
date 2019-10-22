@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_03_10_2019_04_53_46.png>LoginPage</a>]]>
+      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_17_10_2019_01_57_30.png>LoginPage</a>]]>
     </line>
     <line>
       <![CDATA[Entered Captcha]]>
@@ -12,28 +11,28 @@
       <![CDATA[Login Successful]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_03_10_2019_04_53_59.png>LoggedIN</a>]]>
+      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoggedIN_17_10_2019_01_57_41.png>LoggedIN</a>]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_03_10_2019_04_54_03.png>WorkOnThis</a>]]>
+      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\WorkOnThis_17_10_2019_01_57_48.png>WorkOnThis</a>]]>
     </line>
     <line>
-      <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\RECONCILIATION_03_10_2019_04_54_08.png>RECONCILIATION</a>]]>
+      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\RECONCILIATION_17_10_2019_01_57_52.png>RECONCILIATION</a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61409" started-at="2019-10-03T11:23:43Z" finished-at="2019-10-03T11:24:45Z">
+  <suite name="Default suite" duration-ms="1837864" started-at="2019-10-17T08:27:30Z" finished-at="2019-10-17T08:58:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61409" started-at="2019-10-03T11:23:43Z" finished-at="2019-10-03T11:24:45Z">
+    <test name="Default test" duration-ms="1837864" started-at="2019-10-17T08:27:30Z" finished-at="2019-10-17T08:58:08Z">
       <class name="reconciliation.ReconciliationProduct">
-        <test-method status="PASS" signature="configProperty()[pri:0, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="configProperty" is-config="true" duration-ms="34206" started-at="2019-10-03T11:23:09Z" finished-at="2019-10-03T11:23:43Z">
+        <test-method status="PASS" signature="configProperty()[pri:0, instance:reconciliation.ReconciliationProduct@6321e813]" name="configProperty" is-config="true" duration-ms="29738" started-at="2019-10-17T08:27:00Z" finished-at="2019-10-17T08:27:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configProperty -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="Login" duration-ms="16568" started-at="2019-10-03T11:23:43Z" description="login done" finished-at="2019-10-03T11:24:00Z">
+        <test-method status="PASS" signature="Login()[pri:0, instance:reconciliation.ReconciliationProduct@6321e813]" name="Login" duration-ms="11302" started-at="2019-10-17T08:27:30Z" description="login done" finished-at="2019-10-17T08:27:41Z">
           <reporter-output>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoginPage_03_10_2019_04_53_46.png>LoginPage</a>]]>
+              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_17_10_2019_01_57_30.png>LoginPage</a>]]>
             </line>
             <line>
               <![CDATA[Entered Captcha]]>
@@ -42,56 +41,29 @@
               <![CDATA[Login Successful]]>
             </line>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\LoggedIN_03_10_2019_04_53_59.png>LoggedIN</a>]]>
+              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoggedIN_17_10_2019_01_57_41.png>LoggedIN</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="companySelection()[pri:1, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="companySelection" duration-ms="3547" started-at="2019-10-03T11:24:00Z" description="company selection tab" finished-at="2019-10-03T11:24:03Z">
+        <test-method status="PASS" signature="companySelection()[pri:1, instance:reconciliation.ReconciliationProduct@6321e813]" name="companySelection" duration-ms="7564" started-at="2019-10-17T08:27:41Z" description="company selection tab" finished-at="2019-10-17T08:27:49Z">
           <reporter-output>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\WorkOnThis_03_10_2019_04_54_03.png>WorkOnThis</a>]]>
+              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\WorkOnThis_17_10_2019_01_57_48.png>WorkOnThis</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- companySelection -->
-        <test-method status="PASS" signature="ReconProduct()[pri:2, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="ReconProduct" duration-ms="7515" started-at="2019-10-03T11:24:03Z" description="recon product selected" finished-at="2019-10-03T11:24:11Z">
+        <test-method status="PASS" signature="ReconProduct()[pri:2, instance:reconciliation.ReconciliationProduct@6321e813]" name="ReconProduct" duration-ms="3784" started-at="2019-10-17T08:27:49Z" description="recon product selected" finished-at="2019-10-17T08:27:52Z">
           <reporter-output>
             <line>
-              <![CDATA[<a href=E:\git_workspace\Efiling\Efiling\screenshots\RECONCILIATION_03_10_2019_04_54_08.png>RECONCILIATION</a>]]>
+              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\RECONCILIATION_17_10_2019_01_57_52.png>RECONCILIATION</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- ReconProduct -->
-        <test-method status="PASS" signature="periodforRecon()[pri:3, instance:reconciliation.ReconciliationProduct@64bfbc86]" name="periodforRecon" duration-ms="33714" started-at="2019-10-03T11:24:11Z" description="selecting financial year and month   " finished-at="2019-10-03T11:24:45Z">
+        <test-method status="PASS" signature="periodforRecon()[pri:3, instance:reconciliation.ReconciliationProduct@6321e813]" name="periodforRecon" duration-ms="1815078" started-at="2019-10-17T08:27:52Z" description="selecting financial year and month   " finished-at="2019-10-17T08:58:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- periodforRecon -->
       </class> <!-- reconciliation.ReconciliationProduct -->
-=======
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="17191" started-at="2019-10-03T11:29:52Z" finished-at="2019-10-03T11:30:09Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="17191" started-at="2019-10-03T11:29:52Z" finished-at="2019-10-03T11:30:09Z">
-      <class name="Recon.RBL_Recon">
-        <test-method status="PASS" signature="configProperty()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="configProperty" is-config="true" duration-ms="17922" started-at="2019-10-03T11:29:34Z" finished-at="2019-10-03T11:29:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configProperty -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="Login" duration-ms="6758" started-at="2019-10-03T11:29:52Z" description="login in TG admin Portal" finished-at="2019-10-03T11:29:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method status="PASS" signature="Company_Select()[pri:1, instance:Recon.RBL_Recon@50b494a6]" name="Company_Select" duration-ms="10416" started-at="2019-10-03T11:29:59Z" description="Company Selection" finished-at="2019-10-03T11:30:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Company_Select -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Recon.RBL_Recon@50b494a6]" name="tearDown" is-config="true" duration-ms="3651" started-at="2019-10-03T11:30:09Z" finished-at="2019-10-03T11:30:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Recon.RBL_Recon -->
->>>>>>> branch 'Rama' of https://github.com/testergenie/Efiling.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

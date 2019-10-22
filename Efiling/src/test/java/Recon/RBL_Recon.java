@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,15 +23,15 @@ public class RBL_Recon extends Base{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
 		
 	try{	
-	/*	//Username
+		//Username
 		String Username = JOptionPane.showInputDialog("Please enter the Username:");
 		driver.findElement(By.xpath(ObjectRepository.username)).sendKeys(Username);
 		//Password
 		String password = JOptionPane.showInputDialog("Please enter the Password:");
-		driver.findElement(By.xpath(ObjectRepository.password)).sendKeys(password);*/
+		driver.findElement(By.xpath(ObjectRepository.password)).sendKeys(password);
 		
-		driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("ajay@taxgenie.in");
-		driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Taxgenie@123");
+/*		driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("ajay@taxgenie.in");
+		driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Taxgenie@123");*/
 		
 		//Captcha
 		String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
@@ -105,6 +106,7 @@ public class RBL_Recon extends Base{
 			System.out.println(e);
 		}
 	
+		
 	
 	
 	
@@ -114,5 +116,115 @@ public class RBL_Recon extends Base{
 	
 	
 		}//Company Selection
+	
 
+	@Test(priority = 3, description = "selecting financial year and month   ")
+	public void periodforRecon() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		WebDriverWait wait = new WebDriverWait(driver, 120);
+	try {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(ObjectRepository.reconFY)).click();
+		Thread.sleep(2000);
+		for (int i = 1; i < 3; i++) {
+
+			String period = driver.findElement(By.xpath(
+					"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div["+ i + "]/span")).getText();
+			if (period.equals("2018-2019")) {
+				driver.findElement(By.xpath(
+						"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[1]/ng-select/ng-dropdown-panel/div/div[2]/div["+ i + "]/span")).click();
+				break;
+			}
+		}
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(ObjectRepository.reconM1)).click();
+		Thread.sleep(2000);
+		for (int i = 1; i < 12; i++) {
+
+		 String	M1 = driver.findElement(By.xpath(
+					"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div["
+							+ i + "]/span"))
+					.getText();
+			if (M1.equals("Dec 2018")) {
+				driver.findElement(By.xpath(
+						"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div["
+								+ i + "]/span"))
+						.click();
+				break;
+			}
+
+		}
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(ObjectRepository.reconM2)).click();
+		Thread.sleep(1000);
+		for (int i = 1; i < 12; i++) {
+
+			String M2 = driver.findElement(By.xpath(
+					"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[3]/ng-select/ng-dropdown-panel/div/div/div["+ i +"]/span"))
+					.getText();
+			if (M2.equals("Dec 2018")) {
+				driver.findElement(By.xpath(
+						"//app-reconcilation/div[1]/div/div/div/div[3]/app-vendor-date-picker/div/div[3]/ng-select/ng-dropdown-panel/div/div/div["
+								+ i + "]/span"))
+						.click();
+				break;
+			}
+
+		}
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//app-reconcilation/div/div/div/div/div[3]/div/button")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//app-reconcilation/div[1]/div/div/div/div[5]/table/tbody/tr[7]/td[10]/button")));
+		//table data in recon
+		driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[5]/table/tbody/tr[7]/td[10]")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[1]/div[3]/div[2]/button[3]")).click();
+		
+		//Vendor Selection
+		WebElement VendorName= 		driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[1]/div[3]/div/div/table/tbody/tr[40]/td[5]/button"));
+		js.executeScript("arguments[10].scrollIntoView();", VendorName);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[1]/div[3]/div/div/table/tbody/tr[40]/td[5]/button")));
+		VendorName.click();
+		Thread.sleep(3000);
+	
+	//manual match final page
+	String LP = JOptionPane.showInputDialog("Please enter the Last Page No in GSTR2A Table:");
+	int LP2A = Integer.parseInt(LP);
+	
+
+
+for (int k = 1; k <=LP2A; k++) {
+	for (int i = 1; i <= 10; i++) {
+		
+	/*	String date1 =driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[2]/app-manual-matching/div/div[3]/div[1]/p-table/div/div[2]/div/div[2]/table/tbody/tr["+i+"]/td[5]")).getText();
+	
+		driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[2]/app-manual-matching/div/div[3]/div[1]/p-table/div/div[2]/div/div[2]/table/tbody/tr["+i+"]/td[5]")).click();
+	*/	
+		try {
+			WebElement FinYear2A = driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[2]/app-manual-matching/div/div[3]/div[1]/p-table/div/div[2]/div/div[2]/table/tbody/tr["+i+"]/td[4]"));
+			js.executeScript("arguments[0].scrollIntoView();", FinYear2A);
+			String finyearGSTR2A =FinYear2A.getText();
+			FinYear2A.click();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} // this for main for look int i
+	driver.findElement(By.xpath("//app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[2]/app-manual-matching/div/div[3]/div[1]/p-table/div/p-paginator/div/a[3]/span")).click();
+} // this end is for k
+
+//driver.findElement(By.xpath("//*[@id=\"setFootertopmargin\"]/app-reconcilation/div[1]/div/div/div/div[9]/app-gstr2a-pending/div[2]/app-seller-wise/div[2]/app-manual-matching/div/div[3]/div[1]/p-table/div/p-paginator/div/span/a[2]")).click();
+
+	
+	} //this close is for test priorty 3
+	catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	}
+
+}
+	
+
+	
+	
 }//RBL_Recon

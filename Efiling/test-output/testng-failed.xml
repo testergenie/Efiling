@@ -3,23 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="Admin_Module.SPCA_Create">
+      <class name="reconciliation.ReconciliationProduct">
         <methods>
-          <include name="SPCACOMPANYcreation"/>
-          <include name="tearDown"/>
+          <include name="companySelection"/>
           <include name="configProperty"/>
         </methods>
-      </class> <!-- Admin_Module.SPCA_Create -->
-=======
-      <class name="Recon.RBL_Recon">
-        <methods>
-          <include name="tearDown"/>
-          <include name="configProperty"/>
-          <include name="Company_Select"/>
-        </methods>
-      </class> <!-- Recon.RBL_Recon -->
->>>>>>> branch 'Rama' of https://github.com/testergenie/Efiling.git
+      </class> <!-- reconciliation.ReconciliationProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
