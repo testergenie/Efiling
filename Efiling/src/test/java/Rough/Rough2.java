@@ -33,7 +33,7 @@ public class Rough2 extends Base {
 			wait = new WebDriverWait(driver, 30);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
 
-			type_Xpath(ObjectRepository.username, "saurav@taxgenie.in");
+			type_Xpath(ObjectRepository.user, "saurav@taxgenie.in");
 			type_Xpath(ObjectRepository.password, "Taxgenie@123");
 			String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 			type_Xpath(ObjectRepository.captchaText, captchaVal);

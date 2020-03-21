@@ -29,7 +29,7 @@ public class ReconciliationProduct extends Base {
 			Reporter.log("<a href=" + path + ">LoginPage</a>");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
 
-			type_Xpath(ObjectRepository.username, "ajay@taxgenie.in");
+			type_Xpath(ObjectRepository.user, "ajay@taxgenie.in");
 			type_Xpath(ObjectRepository.password, "Taxgenie@123");
 			String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 			type_Xpath(ObjectRepository.captchaText, captchaVal);
@@ -56,7 +56,8 @@ public class ReconciliationProduct extends Base {
 			String GSTIN_NO = JOptionPane.showInputDialog("Please enter the GSTIN NO");
 			Search.sendKeys(GSTIN_NO);
 			Thread.sleep(2000);
-			driver.findElement(By.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/div/div/div[2]/table/tbody/tr[1]/td[8]/button")).click();
+			driver.findElement(By
+					.xpath("/html/body/app-root/div/div/div/div/app-main-login/div[1]/div/div/div/p-table/div/div/div/div[2]/table/tbody/tr[1]/td[8]/button")).click();
 		
 			path = Base.captureScreenShot("WorkOnThis");
 			Reporter.log("<a href=" + path + ">WorkOnThis</a>");

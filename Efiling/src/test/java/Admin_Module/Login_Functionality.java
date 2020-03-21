@@ -27,7 +27,7 @@ public class Login_Functionality {
 				WebDriverWait wait = new WebDriverWait(driver, 30);
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
 
-				driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("admin@taxgenie.in");
+				driver.findElement(By.xpath(ObjectRepository.user)).sendKeys("admin@taxgenie.in");
 				driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("newS@Tg");
 				String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 				Thread.sleep(2000);

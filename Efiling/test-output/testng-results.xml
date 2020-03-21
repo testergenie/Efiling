@@ -1,69 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_17_10_2019_01_57_30.png>LoginPage</a>]]>
-    </line>
-    <line>
-      <![CDATA[Entered Captcha]]>
-    </line>
-    <line>
-      <![CDATA[Login Successful]]>
-    </line>
-    <line>
-      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoggedIN_17_10_2019_01_57_41.png>LoggedIN</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\WorkOnThis_17_10_2019_01_57_48.png>WorkOnThis</a>]]>
-    </line>
-    <line>
-      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\RECONCILIATION_17_10_2019_01_57_52.png>RECONCILIATION</a>]]>
+      <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_21_03_2020_11_26_35.png>LoginPage</a>]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1837864" started-at="2019-10-17T08:27:30Z" finished-at="2019-10-17T08:58:08Z">
+  <suite name="Default suite" duration-ms="23672" started-at="2020-03-21T05:56:30Z" finished-at="2020-03-21T05:56:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1837864" started-at="2019-10-17T08:27:30Z" finished-at="2019-10-17T08:58:08Z">
-      <class name="reconciliation.ReconciliationProduct">
-        <test-method status="PASS" signature="configProperty()[pri:0, instance:reconciliation.ReconciliationProduct@6321e813]" name="configProperty" is-config="true" duration-ms="29738" started-at="2019-10-17T08:27:00Z" finished-at="2019-10-17T08:27:30Z">
+    <test name="Default test" duration-ms="23672" started-at="2020-03-21T05:56:30Z" finished-at="2020-03-21T05:56:54Z">
+      <class name="Admin_Module.Login_Functionality$Login1">
+        <test-method status="PASS" signature="configProperty()[pri:0, instance:Admin_Module.Login_Functionality$Login1@cd2dae5]" name="configProperty" is-config="true" duration-ms="76009" started-at="2020-03-21T05:55:14Z" finished-at="2020-03-21T05:56:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configProperty -->
-        <test-method status="PASS" signature="Login()[pri:0, instance:reconciliation.ReconciliationProduct@6321e813]" name="Login" duration-ms="11302" started-at="2019-10-17T08:27:30Z" description="login done" finished-at="2019-10-17T08:27:41Z">
+        <test-method status="PASS" signature="LoginPage()[pri:0, instance:Admin_Module.Login_Functionality$Login1@cd2dae5]" name="LoginPage" duration-ms="23657" started-at="2020-03-21T05:56:30Z" description="login in TG admin Portal" finished-at="2020-03-21T05:56:54Z">
           <reporter-output>
             <line>
-              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_17_10_2019_01_57_30.png>LoginPage</a>]]>
-            </line>
-            <line>
-              <![CDATA[Entered Captcha]]>
-            </line>
-            <line>
-              <![CDATA[Login Successful]]>
-            </line>
-            <line>
-              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoggedIN_17_10_2019_01_57_41.png>LoggedIN</a>]]>
+              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\LoginPage_21_03_2020_11_26_35.png>LoginPage</a>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- Login -->
-        <test-method status="PASS" signature="companySelection()[pri:1, instance:reconciliation.ReconciliationProduct@6321e813]" name="companySelection" duration-ms="7564" started-at="2019-10-17T08:27:41Z" description="company selection tab" finished-at="2019-10-17T08:27:49Z">
-          <reporter-output>
-            <line>
-              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\WorkOnThis_17_10_2019_01_57_48.png>WorkOnThis</a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- companySelection -->
-        <test-method status="PASS" signature="ReconProduct()[pri:2, instance:reconciliation.ReconciliationProduct@6321e813]" name="ReconProduct" duration-ms="3784" started-at="2019-10-17T08:27:49Z" description="recon product selected" finished-at="2019-10-17T08:27:52Z">
-          <reporter-output>
-            <line>
-              <![CDATA[<a href=E:\Workspace\Efiling\Efiling\screenshots\RECONCILIATION_17_10_2019_01_57_52.png>RECONCILIATION</a>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- ReconProduct -->
-        <test-method status="PASS" signature="periodforRecon()[pri:3, instance:reconciliation.ReconciliationProduct@6321e813]" name="periodforRecon" duration-ms="1815078" started-at="2019-10-17T08:27:52Z" description="selecting financial year and month   " finished-at="2019-10-17T08:58:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- periodforRecon -->
-      </class> <!-- reconciliation.ReconciliationProduct -->
+        </test-method> <!-- LoginPage -->
+      </class> <!-- Admin_Module.Login_Functionality$Login1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

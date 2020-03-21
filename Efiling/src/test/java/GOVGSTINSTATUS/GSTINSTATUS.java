@@ -37,11 +37,11 @@ public class GSTINSTATUS  {
 					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 					Thread.sleep(2000);
 					
-					driver.findElement(By.id("username")).sendKeys("rakeshdube17");
+					driver.findElement(By.id("username")).sendKeys("rakeshdube7");
 			
 
 	
-					driver.findElement(By.id("user_pass")).sendKeys("Regime@2019");
+					driver.findElement(By.id("user_pass")).sendKeys("Resagit@2019");
 	
 	         		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("imgCaptcha")));
 	         

@@ -25,7 +25,7 @@ public class RBL_Recon extends Base{
 	try{	
 		//Username
 		String Username = JOptionPane.showInputDialog("Please enter the Username:");
-		driver.findElement(By.xpath(ObjectRepository.username)).sendKeys(Username);
+		driver.findElement(By.xpath(ObjectRepository.user)).sendKeys(Username);
 		//Password
 		String password = JOptionPane.showInputDialog("Please enter the Password:");
 		driver.findElement(By.xpath(ObjectRepository.password)).sendKeys(password);

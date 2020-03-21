@@ -31,7 +31,7 @@ import Base.ObjectRepository;
 					Reporter.log("<a href="+path+">Login Page</a>");
 					WebDriverWait wait = new WebDriverWait(driver,30);
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user")));
-					driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("TGDSUSER1@tg.in"); 
+					driver.findElement(By.xpath(ObjectRepository.user)).sendKeys("TGDSUSER1@tg.in"); 
 					driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Dev@tg123");
 					
 					String Cap = driver.findElement(By.xpath(ObjectRepository.captcha)).getText();

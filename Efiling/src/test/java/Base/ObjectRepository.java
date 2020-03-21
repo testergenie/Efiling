@@ -4,7 +4,7 @@ public class ObjectRepository {
 	
 	// # login page
 	public static String name_xpath = "//*[@id=\"user\"]";
-		public static String username = "//*[@id=\"user\"]";
+		public static String user = "//*[@id=\"user\"]";
 		public static String password = "//*[@id=\"password\"]";
 		public static String captcha = "//*[@id=\"captcha\"]";
 		public static String captchaText = "//*[@id=\"captcha1\"]";

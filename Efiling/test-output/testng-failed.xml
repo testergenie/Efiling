@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="reconciliation.ReconciliationProduct">
+      <class name="Recon_2_0_Data_Comparision.Summary_Comparision">
         <methods>
-          <include name="companySelection"/>
           <include name="configProperty"/>
+          <include name="companySelection"/>
         </methods>
-      </class> <!-- reconciliation.ReconciliationProduct -->
+      </class> <!-- Recon_2_0_Data_Comparision.Summary_Comparision -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

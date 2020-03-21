@@ -29,7 +29,7 @@ public class Rough1 extends Base {
 			
 
 
-			driver.findElement(By.xpath(ObjectRepository.username)).sendKeys("saurav@taxgenie.in");
+			driver.findElement(By.xpath(ObjectRepository.user)).sendKeys("saurav@taxgenie.in");
 			driver.findElement(By.xpath(ObjectRepository.password)).sendKeys("Taxgenie@123");
 			String captchaVal = JOptionPane.showInputDialog("Please enter the captcha value:");
 			Thread.sleep(2000);
